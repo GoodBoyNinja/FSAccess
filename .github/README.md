@@ -3,12 +3,26 @@
 A quick way to validate and / or condition access to files and network in After-Effects.
 For example, if your entire script depends on a licensing system / a local options file, you can use this to validate access to the file before proceeding. ***Note that newer versions of After-Effects automatically show a user friendly dialog, consider whether you actually need to implement this or not*** 
 
----
+<br/>
 
+## What is this good for?
+
+Mostly user friendliness.
+
+A palette (unlike a dialog) lets the user interact with the rest of the application while it is open.
+This makes it easier for the user to find the preference option and change it.
+They can then click "Check Again" to go ahead and run the script without having to relaunch it from the window menu.
+
+The biggest downside however is that unlike a dialog, the palette does not pause the execution of the script and relies on a callback to run the main script code.
+
+<br/>
+
+# Preview
+
+An example of the palette shown to the user when access is not granted:
 
 ![Example palette](./hero.png)
 
-Example of the palette shown to the user when access is not granted.
 
 The path to where the preference option is located changes depending on the OS.
 
@@ -54,8 +68,8 @@ We import the `$FSAccessValidator` class and initialize a new instance of it. At
 
 <br/>
 
-# API
-## $FSAccessValidator
+
+# $FSAccessValidator
 ### conditionWithPalette(callback, options)
 - `callback` - The main function of your script, or whatever function you want to run after the access validation is complete.
 - `options` - An object that lets you customize the palette shown to the user.
