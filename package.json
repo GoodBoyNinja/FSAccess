@@ -1,0 +1,12 @@
+{
+  "name": "fsaccess",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Good Boy Ninja",
+  "license": "MIT",
+  "description": "Extendscript library for prompting the user to allow access to files and network resources."
+}
