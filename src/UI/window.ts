@@ -1,6 +1,7 @@
 /// <reference types="types-for-adobe/AfterEffects/23.0"/>
+/// <reference types="../types.ts"/>
 
-let makePalette = function (validator, grantedCallback, options) {
+let makePalette = function (validator, grantedCallback: () => any, options: Options) {
 	if (!validator) {
 		throw new Error("Validator instance is required");
 	}

@@ -1,12 +1,13 @@
 /// <reference path="./UI/window.ts" />
 /// <reference types="types-for-adobe/AfterEffects/23.0"/>
+/// <reference types="./types.ts"/>
 
 // asks the user to turn on "Allow Scripts to Write Files and Access Network" in Ae settings
 
-var $FSAccessValidator = function (options) {
+var $FSAccessValidator = function (options: Options) {
 	//@include './UI/window.ts';
 
-	this.conditionWithPalette = function (grantedCallback, options) {
+	this.conditionWithPalette = function (grantedCallback, options: Options) {
 		if (this.hasAccessToFilesAndNetwork()) {
 			if (grantedCallback && typeof grantedCallback == "function") {
 				grantedCallback();
