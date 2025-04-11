@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"module": "none",
+		"noLib": true,
+		"outFile": "./dist/index.js",
+		"strictNullChecks": true,
+		"noUncheckedIndexedAccess": true,
+		"removeComments": true,
+		"allowJs": true
+	},
+	"include": ["./src/**/*.ts", "./src/**/*.js"]
+}
